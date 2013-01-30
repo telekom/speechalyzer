@@ -1,0 +1,205 @@
+<html>
+
+<APPLET
+  archive = "labelTool.jar"
+  CODE     = "com.tlabs.gui.Recorder.class"
+  NAME     = "LabelTool_Applet"
+  WIDTH    = "1000"
+  HEIGHT   = "700"
+  HSPACE   = "0"
+  VSPACE   = "0"
+  ALIGN    = "middle"
+>
+<PARAM NAME="url" VALUE="localhost">
+<PARAM NAME="port" VALUE="6666">
+<PARAM Name="classification" VALUE="true">
+<PARAM Name="transcriptionFieldInline" VALUE="true">
+<PARAM Name="transcribeOnly" VALUE="false">
+<PARAM Name="withTranscribe" VALUE="true">
+<PARAM Name="withRecognizer" VALUE="true">
+<PARAM Name="withSynthesizer" VALUE="true">
+<PARAM Name="noMultiplePlayBack" VALUE="false">
+<PARAM Name="useExternalPlayer" VALUE="false">
+<PARAM Name="refreshFromHardDisc" VALUE="true">
+<PARAM Name="replacements" VALUE="f:[fragment],v:[vocal],b:[breath],n:[noise],g:[garbage],p:[pause,h:@hes@]">
+<PARAM Name="classes" VALUE="fn:firstname,ln:lastname,dg:digit,in:integer,dc:decimal,od:ordinal,dt:date,yr:year,mn:month,da:day,tm:time,cm:company,tw:town,cn:country,cy:currency,an:alphanumeric,re:region">
+<PARAM Name="prefixes" VALUE="n:&">
+<PARAM Name="abbreviations" VALUE="usw:und so weiter,z.b.:zum beispiel,telnr:telefonnummer">
+<PARAM Name="sampleRate" VALUE="11025">
+<PARAM Name="sortRecordings" VALUE="false">
+<PARAM Name="sortOrderAscending" VALUE="true">
+<PARAM Name="audioFormatAlaw" VALUE="false">
+<PARAM Name="recordingAudioAskName" VALUE="false">
+<PARAM Name="fastModeSetsAnger" VALUE="true">
+<PARAM Name="charEnc" VALUE="UTF-8">
+<!--PARAM Name="charEnc" VALUE="ISO8859-1"-->
+<PARAM Name="transcriptionField.height" VALUE="80">
+<PARAM Name="transcriptionField.width" VALUE="800">
+<PARAM Name="numberToWord" VALUE="true">
+<PARAM Name="markAngerInTable" VALUE="true">
+<PARAM Name="noAnger.label" VALUE="no anger">
+<PARAM Name="coldAnger.label" VALUE="?">
+<PARAM Name="anger.label" VALUE="anger">
+<PARAM Name="categories" VALUE="-1,NA;0,G;1,N;2,U;3,A;4,A;5,A">
+<!-- PARAM Name="categories" VALUE="-1,NA;1,C;2,Y;4,A;6,S"/-->
+<PARAM Name="indexName" VALUE="No">
+<PARAM Name="recDialogName" VALUE="Session">
+<PARAM Name="recNameName" VALUE="Name">
+<PARAM Name="recWordsName" VALUE="Transcript">
+<PARAM Name="recLabName" VALUE="Label">
+<PARAM Name="recPredName" VALUE="Prediction">
+<PARAM Name="recSizeName" VALUE="Size">
+<PARAM Name="record.label" VALUE="">
+<PARAM Name="record.tooltip" VALUE="press to record">
+<PARAM Name="record.short" VALUE="r">
+<PARAM Name="record.question" VALUE="The file name, if left empty, current date and time will be used."/>
+<PARAM Name="play.label" VALUE="">
+<PARAM Name="play.tooltip" VALUE="press to play">
+<PARAM Name="play.short" VALUE="p">
+<PARAM Name="resume.label" VALUE="">
+<PARAM Name="resume.tooltip" VALUE="press to resume">
+<PARAM Name="resume.short" VALUE="m">
+<PARAM Name="stop.label" VALUE="">
+<PARAM Name="stop.tooltip" VALUE="press to stop">
+<PARAM Name="stop.short" VALUE="s">
+<PARAM Name="judge.label" VALUE="judge">
+<PARAM Name="judge.tooltip" VALUE="press to classify">
+<PARAM Name="judge.short" VALUE="j">
+<PARAM Name="rename.label" VALUE="">
+<PARAM Name="rename.tooltip" VALUE="press to rename recording">
+<PARAM Name="rename.short" VALUE="e">
+<PARAM Name="rename.question" VALUE="The new file name."/>
+<PARAM Name="open.label" VALUE="">
+<PARAM Name="open.tooltip" VALUE="press to load from local file or directory (server has to run on the same machine)">
+<PARAM Name="open.short" VALUE="n">
+<PARAM Name="open.question" VALUE="choose file to open">
+<PARAM Name="export.label" VALUE="export">
+<PARAM Name="export.tooltip" VALUE="press to export transcripts to local file (server has to run on the same machine)">
+<PARAM Name="export.short" VALUE="e">
+<PARAM Name="export.question" VALUE="choose export file">
+<PARAM Name="import.label" VALUE="import">
+<PARAM Name="import.tooltip" VALUE="press to import transcripts from local file (server has to run on the same machine)">
+<PARAM Name="import.short" VALUE="t">
+<PARAM Name="import.question" VALUE="choose import file">
+<PARAM Name="exec.label" VALUE="">
+<PARAM Name="exec.tooltip" VALUE="press to execute external command on the selected audio file, command must be specified in the server configuration.">
+<PARAM Name="exec.short" VALUE="x">
+<PARAM Name="openModel.label" VALUE="model">
+<PARAM Name="openModel.tooltip" VALUE="if selected, classifier model can be chosen by file open.">
+<PARAM Name="diropen.question" VALUE="choose directory to open.">
+<PARAM Name="toggleTranscript.label" VALUE="toggle transcript - recognition">
+<PARAM Name="toggleTranscript.tooltip" VALUE="toggle between transncript and transcription">
+<PARAM Name="toggleTranscript.short" VALUE="t">
+<PARAM Name="openDirectory.label" VALUE="directory">
+<PARAM Name="openDirectory.tooltip" VALUE="If set, file open opens a directory containing audio files, else a textlist of files is opened.">
+<PARAM Name="evalFiles.label" VALUE="files">
+<PARAM Name="evalFiles.tooltip" VALUE="If set, the model is evaluated against the files (as test), otherwise the evaluation is 10 fold cross on the training.">
+<PARAM Name="copyRecognition.label" VALUE="recognition -> transcript">
+<PARAM Name="copyRecognition.tooltip" VALUE="copy transcription to transcipt (overwrite)">
+<PARAM Name="copyRecognition.short" VALUE="c">
+<PARAM Name="deleteAllPredictions.label" VALUE="del all preds">
+<PARAM Name="deleteAllPredictions.tooltip" VALUE="press to delete all ppredictions">
+<PARAM Name="deleteAllPredictions.short" VALUE="i">
+<PARAM Name="refresh.label" VALUE="">
+<PARAM Name="refresh.tooltip" VALUE="press to refresh list from server">
+<PARAM Name="refresh.short" VALUE="f">
+<PARAM Name="delete.question" VALUE="sure to delete recordings? (can't be undone)">
+<PARAM Name="removeUntagged.question" VALUE="sure to delete recordings without a label?">
+<PARAM Name="removeUntagged.label" VALUE="delete untagged">
+<PARAM Name="removeUntagged.tooltip" VALUE="press to delete all files without a label">
+<PARAM Name="removeUntagged.short" VALUE="g">
+<PARAM Name="recognize.label" VALUE="recognize">
+<PARAM Name="recognize.tooltip" VALUE="press to recognize text with speech to text module">
+<PARAM Name="recognize.short" VALUE="z">
+<PARAM Name="train.label" VALUE="train">
+<PARAM Name="train.tooltip" VALUE="press to train a new classification model">
+<PARAM Name="train.short" VALUE="t">
+<PARAM Name="synthesize.label" VALUE="synthesize">
+<PARAM Name="synthesize.tooltip" VALUE="press to synthesize">
+<PARAM Name="synthesize.short" VALUE="y">
+<PARAM Name="synthesize.question" VALUE="sure to synthesize? (overwrites audio)">
+<PARAM Name="synthesizeAll.label" VALUE="synthesize all">
+<PARAM Name="synthesizeAll.tooltip" VALUE="press to synthesize all">
+<PARAM Name="synthesizeAll.short" VALUE="h">
+<PARAM Name="ttsSexFemale.tooltip" VALUE="tick to set tts gender">
+<PARAM Name="ttsSexFemale.label" VALUE="female">
+<PARAM Name="ttsLanguages.label" VALUE="lang:">
+<PARAM Name="ttsLanguages.values" VALUE="de-DE en-US zh-CN">
+<PARAM Name="ttsLanguages.tooltip" VALUE="select tts language">
+<PARAM Name="synthesizeAll.question" VALUE="sure to synthesize? (overwrites all audio)">
+<PARAM Name="judgeAll.label" VALUE="judge all">
+<PARAM Name="judgeAll.tooltip" VALUE="press to classify all">
+<PARAM Name="judgeAll.short" VALUE="q">
+<PARAM Name="recognizeAll.label" VALUE="recognize all">
+<PARAM Name="recognizeAll.tooltip" VALUE="press to recognize all">
+<PARAM Name="recognizeAll.short" VALUE="g">
+<PARAM Name="evaluate.label" VALUE="eval">
+<PARAM Name="evaluate.tooltip" VALUE="press to evaluate classification (10 fold cross)">
+<PARAM Name="evaluate.short" VALUE="v">
+<PARAM Name="delete.label" VALUE="">
+<PARAM Name="delete.tooltip" VALUE="press to delete physically! no undo!">
+<PARAM Name="delete.short" VALUE="d">
+<PARAM Name="buttons" VALUE="s1 s2 s3 s4 s5">
+<PARAM Name="s1.label" VALUE="1">
+<PARAM Name="s1.value" VALUE="1">
+<PARAM Name="s1.tooltip" VALUE="press for zero anger">
+<PARAM Name="s1.short" VALUE="1">
+<PARAM Name="s2.label" VALUE="2">
+<PARAM Name="s2.value" VALUE="2">
+<PARAM Name="s2.tooltip" VALUE="press for not sure anger">
+<PARAM Name="s2.short" VALUE="2">
+<PARAM Name="s3.label" VALUE="3">
+<PARAM Name="s3.value" VALUE="3">
+<PARAM Name="s3.tooltip" VALUE="press for light anger">
+<PARAM Name="s3.short" VALUE="3">
+<PARAM Name="s4.label" VALUE="4">
+<PARAM Name="s4.value" VALUE="4">
+<PARAM Name="s4.tooltip" VALUE="press for clear anger">
+<PARAM Name="s4.short" VALUE="4">
+<PARAM Name="s5.label" VALUE="5">
+<PARAM Name="s5.value" VALUE="5">
+<PARAM Name="s5.tooltip" VALUE="press for strong anger">
+<PARAM Name="s5.short" VALUE="5">
+<PARAM Name="NA.label" VALUE="NA">
+<PARAM Name="NA.tooltip" VALUE="press for not applicable">
+<PARAM Name="NA.short" VALUE="n">
+<PARAM Name="sampleRate.label" VALUE="rate:">
+<PARAM Name="sampleRate.values" VALUE="8000 11025 16000 22050 44100">
+<PARAM Name="audioFormat.label" VALUE="format:">
+<PARAM Name="audioFormat.values" VALUE="wav raw pcm">
+<PARAM Name="removeLastLabel.label" VALUE="del last label">
+<PARAM Name="removeLastLabel.tooltip" VALUE="press to remove the last label">
+<PARAM Name="removeLastLabel.short" VALUE="r">
+<PARAM Name="removePred.label" VALUE="del prediction">
+<PARAM Name="removePred.tooltip" VALUE="press to remove the classification result (prediction)">
+<PARAM Name="removePred.short" VALUE="m">
+<PARAM Name="statistics.label" VALUE="stats">
+<PARAM Name="statistics.tooltip" VALUE="press for statistics">
+<PARAM Name="statistics.short" VALUE="y">
+<PARAM Name="transcribe.label" VALUE="transcribe">
+<PARAM Name="transcribe.tooltip" VALUE="presss to open transcription window">
+<PARAM Name="transcribe.short" VALUE="t">
+<PARAM Name="normalize.label" VALUE="normalize">
+<PARAM Name="normalize.tooltip" VALUE="presss to normalize transcription">
+<PARAM Name="normalize.short" VALUE="z">
+<PARAM Name="normalizeAll.label" VALUE="nrmlz. all">
+<PARAM Name="normalizeAll.tooltip" VALUE="presss to normalize all trasncriptions.">
+<PARAM Name="normalizeAll.short" VALUE="y">
+<PARAM Name="wer.label" VALUE="WER">
+<PARAM Name="wer.tooltip" VALUE="compute Word error rate">
+<PARAM Name="wer.short" VALUE="t">
+<PARAM Name="checkSpelling.label" VALUE="CS">
+<PARAM Name="checkSpelling.tooltip" VALUE="Check to check the spelling of each word in the transcription field (after blank insertion).">
+<PARAM Name="fastTranscritpionMode.tooltip" VALUE="check for fast transcription mode">
+<PARAM Name="fastTranscritpionMode.label" VALUE="FTM">
+<PARAM Name="fastPlayMode.tooltip" VALUE="check for automated playback mode">
+<PARAM Name="fastPlayMode.label" VALUE="APM">
+<PARAM Name="numberToWord.tooltip" VALUE="check for automated conversion of numbers to words">
+<PARAM Name="numberToWord.label" VALUE="N2W">
+<PARAM Name="extractFeatures.tooltip" VALUE="check to extract features before training classifier or judging all files.">
+<PARAM Name="extractFeatures.label" VALUE="EF">
+</APPLET>
+<p>
+	<a href="testkey.cer">testkey</a>
+</p>
+</html>

@@ -1,0 +1,13 @@
+To run the applet in a browser, it must be signed, this command might be used to generate a certificate:
+keytool -genkey -alias testCert -keyalg rsa -keystore myKeystore
+and this to sign the applet:
+jarsigner keystore myKeystore myApplet.jar testCert
+The certificate might be exported like this (and then importet by the browser)
+keytool -exportcert -alias testCert -file testkey.cer -keystore myKeystore
+
+This does not work with the appletviewer, but the file
+java.policy could be edited to grant the necessary rights to the applet.
+grant codeBase "file:/d:/work/SymEmoTester/Recorder/*" {
+	permission java.security.AllPermission;
+};
+The file is located at <JAVA_HOME>/jre/lib/security 
